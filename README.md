@@ -1,1 +1,1 @@
-GCSE Quiz game project.
+GCSE Quiz game project, by Jeevan Hatti
