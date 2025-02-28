@@ -1,0 +1,42 @@
+[
+    {
+        "username": "tecknet",
+        "password": "password123",
+        "highscore": "10"
+    },
+    {
+        "username": "bob",
+        "password": "password456",
+        "highscore": "10"
+    },
+    {
+        "username": "CHarlie",
+        "password": "Password123",
+        "highscore": "0"
+    },
+    {
+        "username": "bobalina",
+        "password": "password123",
+        "highscore": "0"
+    },
+    {
+        "username": "Charlie",
+        "password": "passowrd123",
+        "highscore": "0"
+    },
+    {
+        "username": "charlie",
+        "password": "password123",
+        "highscore": "0"
+    },
+    {
+        "username": "lololol",
+        "password": "password123",
+        "highscore": "0"
+    },
+    {
+        "username": "bob123",
+        "password": "password123",
+        "highscore": "0"
+    }
+]
