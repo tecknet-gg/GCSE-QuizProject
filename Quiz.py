@@ -1,7 +1,9 @@
 import json
 import random
 import sys
+import time
 
+from SaveManager import newGame
 from UserManagement import *
 
 def openJson(filename):
@@ -69,7 +71,7 @@ def menuLoop():
         print("4 - Leaderboard")
         print("5 - Register new user")
         print("6 - Quit")
-        choice = input("Choice: ")
+        choice = input("> ")
         match choice:
             case "1":
                 if loginStatus == "Login":
@@ -80,12 +82,12 @@ def menuLoop():
                     loginStatus = "Login"
                     user = None
             case "2":
-                questions = openJson("questions.json")
-                random.shuffle(questions)
-                print(type(questions))
-                askQuestion(questions, 1, "hard")
-            case "3":
+                if loginStatus == "Login":
+                    print("You are not logged in, returning to menu...")
+                    time.sleep(0.75)
+                    menuLoop()
                 print("Loading Game...")
+                newGame(user)
             case "4":
                 print("Leaderboard")
             case "5":
