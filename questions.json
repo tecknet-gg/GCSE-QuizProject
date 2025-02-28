@@ -1,172 +1,162 @@
 [
     {
-        "question": "Which Formula One team has won the most constructors' championships?",
+        "question": "What is the process by which water moves through a plant, from the roots to the leaves?",
         "choices": [
-            "Ferrari",
-            "McLaren",
-            "Red Bull Racing",
-            "Mercedes-AMG"
+            "Photosynthesis",
+            "Respiration",
+            "Transpiration",
+            "Evaporation"
         ],
-        "answer": "Ferrari"
+        "answer": "Transpiration"
     },
     {
-        "question": "Who is the only driver to have achieved a hat-trick of wins at the Australian Grand Prix?",
+        "question": "Which ancient civilization built the city of Petra in Jordan?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Jacques Villeneuve"
+            "Egyptians",
+            "Greeks",
+            "Romans",
+            "Nabataeans"
         ],
-        "answer": "Michael Schumacher"
+        "answer": "Nabataeans"
     },
     {
-        "question": "What is the name of the iconic Formula One circuit in Spain?",
+        "question": "What is the largest living species of lizard, found primarily in Indonesia and Papua New Guinea?",
         "choices": [
-            "Circuit de Spa-Francorchamps",
-            "Monaco Grand Prix Circuit",
-            "Silverstone Circuit",
-            "Barcelona-Catalunya"
+            "Komodo Dragon",
+            "Saltwater Crocodile",
+            "Black Mamba",
+            "Green Anaconda"
         ],
-        "answer": "Barcelona-Catalunya"
+        "answer": "Komodo Dragon"
     },
     {
-        "question": "Who holds the record for most podium finishes in a single season?",
+        "question": "Who was the first President of the United States to resign from office?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Ayrton Senna"
+            "Richard Nixon",
+            "John F. Kennedy",
+            "Jimmy Carter",
+            "Gerald Ford"
         ],
-        "answer": "Michael Schumacher"
+        "answer": "Richard Nixon"
     },
     {
-        "question": "What is the name of the Formula One engine manufacturer that has won the most drivers' championships?",
+        "question": "What is the process by which an organism's genetic information is passed on from one generation to the next?",
         "choices": [
-            "Ferrari",
-            "Mercedes-AMG",
-            "Renault",
-            "Honda"
+            "Heritage",
+            "Inheritance",
+            "Genetic Drift",
+            "Natural Selection"
         ],
-        "answer": "Ferrari"
+        "answer": "Inheritance"
     },
     {
-        "question": "Who is the only driver to have achieved a win in every season of their Formula One career, except one?",
+        "question": "Which planet in our solar system has the most moons?",
         "choices": [
-            "Michael Schumacher",
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Alain Prost"
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
         ],
-        "answer": "Michael Schumacher"
+        "answer": "Jupiter"
     },
     {
-        "question": "What is the name of the iconic Formula One circuit that hosts the British Grand Prix?",
+        "question": "Who was the famous American inventor who developed the light bulb, phonograph, and motion picture camera?",
         "choices": [
-            "Silverstone Circuit",
-            "Monaco Grand Prix Circuit",
-            "Circuit de Spa-Francorchamps",
-            "Barcelona-Catalunya"
+            "Thomas Edison",
+            "Alexander Graham Bell",
+            "Nikola Tesla",
+            "Henry Ford"
         ],
-        "answer": "Silverstone Circuit"
+        "answer": "Thomas Edison"
     },
     {
-        "question": "Who holds the record for most fastest laps in a single season?",
+        "question": "What is the largest mammal on Earth, found in Africa and Asia?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Ayrton Senna"
+            "Blue Whale",
+            "Fin Whale",
+            "African Elephant",
+            "Asian Elephant"
         ],
-        "answer": "Lewis Hamilton"
+        "answer": "African Elephant"
     },
     {
-        "question": "What is the name of the first Formula One World Champion from outside Europe?",
+        "question": "Who was the first woman to win a Nobel Prize, awarded for her work on X-rays?",
         "choices": [
-            "Graham Hill",
-            "Jackie Stewart",
-            "Nelson Piquet",
-            "Alain Prost"
+            "Marie Curie",
+            "Rosalind Franklin",
+            "Ada Lovelace",
+            "Sophia Kovalevskaya"
         ],
-        "answer": "Nelson Piquet"
+        "answer": "Maria Sk\u0142odowska-Curie"
     },
     {
-        "question": "Who holds the record for most consecutive points finishes in a single season?",
+        "question": "What is the process by which an organism's cells become specialized to perform specific functions?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Fernando Alonso"
+            "Differentiation",
+            "Mitosis",
+            "Meiosis",
+            "Cellular Respiration"
         ],
-        "answer": "Lewis Hamilton"
+        "answer": "Differentiation"
     },
     {
-        "question": "What is the name of the iconic Formula One driver who won five World Drivers' Championships in a row from 2004 to 2008?",
+        "question": "Which ancient city was the capital of the Inca Empire in Peru?",
         "choices": [
-            "Michael Schumacher",
-            "Sebastian Vettel",
-            "Lewis Hamilton",
-            "Fernando Alonso"
+            "Machu Picchu",
+            "Cuzco",
+            "Lima",
+            "Quito"
         ],
-        "answer": "Michael Schumacher"
+        "answer": "Cuzco"
     },
     {
-        "question": "Who is the only driver to have achieved a podium finish in every season of their Formula One career, except one?",
+        "question": "Who was the famous American author who wrote 'To Kill a Mockingbird' and 'Go Set a Watchman'?",
         "choices": [
-            "Alain Prost",
-            "Jacques Villeneuve",
-            "Fernando Alonso",
-            "Sebastian Vettel"
+            "F. Scott Fitzgerald",
+            "Harper Lee",
+            "Ernest Hemingway",
+            "John Steinbeck"
         ],
-        "answer": "Alain Prost"
+        "answer": "Harper Lee"
     },
     {
-        "question": "What is the name of the iconic Formula One circuit that hosts the Japanese Grand Prix?",
+        "question": "What is the process by which an organism's body temperature remains relatively constant despite changes in its environment?",
         "choices": [
-            "Suzuka Circuit",
-            "Monaco Grand Prix Circuit",
-            "Silverstone Circuit",
-            "Barcelona-Catalunya"
+            "Homeostasis",
+            "Thermoregulation",
+            "Regulation of Body Temperature",
+            "Temperature Regulation"
         ],
-        "answer": "Suzuka Circuit"
+        "answer": "Thermoregulation"
     },
     {
-        "question": "Who holds the record for most pole positions in a single season?",
+        "question": "Which ancient civilization built the Great Pyramid of Giza, one of the Seven Wonders of the Ancient World?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Ayrton Senna"
+            "Egyptians",
+            "Greeks",
+            "Romans",
+            "Sumerians"
         ],
-        "answer": "Lewis Hamilton"
+        "answer": "Egyptians"
     },
     {
-        "question": "What is the name of the first turbocharged engine used in Formula One?",
+        "question": "Who was the famous American astronaut who first walked on the Moon during the Apollo 11 mission in 1969?",
         "choices": [
-            "Ford Cosworth DFV",
-            "Renault EF4",
-            "Ferrari 126C",
-            "Turbomeca T40"
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "John Glenn",
+            "Edwin 'Buzz' Aldrin"
         ],
-        "answer": "Turbochevrolet"
+        "answer": "Neil Armstrong"
     },
     {
-        "question": "Who is the only driver to have achieved a Grand Slam in Formula One, winning all three races at Silverstone?",
+        "question": "What is the process by which an organism's genetic information is altered through changes to its DNA sequence?",
         "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Fernando Alonso"
+            "Mutation",
+            "Genetic Drift",
+            "Natural Selection",
+            "Gene Expression"
         ],
-        "answer": "None"
-    },
-    {
-        "question": "What is the name of the iconic Formula One driver who won four World Drivers' Championships in a row from 2014 to 2017?",
-        "choices": [
-            "Lewis Hamilton",
-            "Sebastian Vettel",
-            "Michael Schumacher",
-            "Fernando Alonso"
-        ],
-        "answer": "Lewis Hamilton"
+        "answer": "Mutation"
     }
 ]

@@ -82,4 +82,4 @@ def generateQuestions(genre, difficulty):
         with open("questions.json", "w") as file:
             json.dump(generatedQuestions, file, indent=4)
 
-generateQuestions("Formula One", "easy")
+generateQuestions("Genearl Knowledge", "medium")

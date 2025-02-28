@@ -8,11 +8,8 @@ def openJson(filename):
     with open(filename, "r") as file:
         return json.load(file)
 
-def askQuestion(number, difficulty):
-
-    questions = openJson("questions.json")
-    random.shuffle(questions)
-    question = questions[0]
+def askQuestion(questions, questionNumber, difficulty):
+    question = questions[questionNumber]
     validAnswer = False
     print()
     print(question["question"])
@@ -35,11 +32,25 @@ def askQuestion(number, difficulty):
             print("Invalid answer, try again to type pass to give up")
 
     if answer.lower() == question["answer"].lower():
-        print(f"Correct! +1 points.")
-        return True
+        if difficulty == 'easy':
+            points = 2
+        elif difficulty == 'medium':
+            points = 3
+        elif difficulty == 'hard':
+            points = 5
+        print(f"Correct answer! {points} awarded!")
+        return points
     else:
-        print(f"Wrong! Correct answer was {question['answer']}")
-        return False
+        if difficulty == 'easy':
+            points = 0
+            print(f"Wrong! Correct answer was {question['answer']}. No points awarded.")
+        elif difficulty == 'medium':
+            points = 0
+            print(f"Wrong! Correct answer was {question['answer']}. No points awarded.")
+        elif difficulty == 'hard':
+            points = -3
+            print(f"Wrong! Correct answer was {question['answer']}. {points} deducted.")
+        return points
 
 
 def menuLoop():
@@ -53,10 +64,10 @@ def menuLoop():
         else:
             print("User - Not logged in")
         print(f"1 - {loginStatus}")
-        print("2 - Register")
+        print("2 - New Game")
         print("3 - Load Game")
-        print("4 - New Game")
-        print("5 - Leaderboard")
+        print("4 - Leaderboard")
+        print("5 - Register new user")
         print("6 - Quit")
         choice = input("Choice: ")
         match choice:
@@ -69,14 +80,17 @@ def menuLoop():
                     loginStatus = "Login"
                     user = None
             case "2":
+                questions = openJson("questions.json")
+                random.shuffle(questions)
+                print(type(questions))
+                askQuestion(questions, 1, "hard")
+            case "3":
+                print("Loading Game...")
+            case "4":
+                print("Leaderboard")
+            case "5":
                 print("Registering...")
                 registerUser()
-            case "3":
-                askQuestion(1,"hard")
-            case "4":
-                print("Load Game")
-            case "5":
-                print("Leaderboard")
             case "6":
                 print("Exiting")
                 sys.exit(0)
