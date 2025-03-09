@@ -3,7 +3,7 @@ import random
 import sys
 import time
 
-from SaveManager import newGame
+from SaveManagement import *
 from UserManagement import *
 
 def openJson(filename):
@@ -86,10 +86,12 @@ def menuLoop():
                     print("You are not logged in, returning to menu...")
                     time.sleep(0.75)
                     menuLoop()
-                else:
-                    saveName = newGame(user)
+                saveName = newGame(user)
+                save = loadSave(user,saveName)
+                questions = [(i["question"], i["choices"], i["answer"]) for i in loadSave(user, saveName)["questions"]]
+
             case "3":
-                questions = openJson("questions.json")
+                questions = openJson("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/questions.json")
                 random.shuffle(questions)
                 questions = questions[:15]
                 askQuestion(questions,1,"easy")
@@ -101,9 +103,14 @@ def menuLoop():
             case "6":
                 print("Exiting")
                 sys.exit(0)
+            case "debug1":
+                user = "bob"
+                saveName = newGame(user)
+                print(loadSave(user,saveName))
+            case "debug2":
+                pass
             case _:
                 print("Invalid choice, returning to menu")
-                menuLoop()
 
 menuLoop()
 

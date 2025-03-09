@@ -1,29 +1,19 @@
 [
     {
         "user": "tecknet",
-        "saveName": "save1",
+        "saveName": "test3",
         "difficulty": "medium",
         "score": 0,
         "questions": [
             {
-                "question": "What is the process by which water moves through a plant, from the roots to the leaves?",
+                "question": "Which bird is known for its ability to mimic human speech?",
                 "choices": [
-                    "Photosynthesis",
-                    "Respiration",
-                    "Transpiration",
-                    "Evaporation"
+                    "Crow",
+                    "Parrot",
+                    "Eagle",
+                    "Owl"
                 ],
-                "answer": "Transpiration"
-            },
-            {
-                "question": "What is the name of the galaxy that contains our Solar System?",
-                "choices": [
-                    "Andromeda",
-                    "Milky Way",
-                    "Triangulum",
-                    "Whirlpool"
-                ],
-                "answer": "Milky Way"
+                "answer": "Parrot"
             },
             {
                 "question": "What is the square root of 64?",
@@ -36,84 +26,104 @@
                 "answer": "8"
             },
             {
-                "question": "How many continents are there on Earth?",
+                "question": "What is the national flower of Japan?",
                 "choices": [
-                    "5",
-                    "6",
-                    "7",
-                    "8"
+                    "Rose",
+                    "Cherry Blossom",
+                    "Lily",
+                    "Tulip"
                 ],
-                "answer": "7"
+                "answer": "Cherry Blossom"
             },
             {
-                "question": "Which metal is liquid at room temperature?",
+                "question": "Which country is home to the Great Pyramid of Giza?",
                 "choices": [
-                    "Iron",
-                    "Mercury",
-                    "Silver",
-                    "Gold"
+                    "Greece",
+                    "Egypt",
+                    "Mexico",
+                    "India"
                 ],
-                "answer": "Mercury"
+                "answer": "Egypt"
             },
             {
-                "question": "What is the largest organ in the human body?",
+                "question": "Which planet is the largest in the Solar System?",
                 "choices": [
-                    "Heart",
-                    "Liver",
-                    "Skin",
-                    "Lungs"
+                    "Saturn",
+                    "Jupiter",
+                    "Neptune",
+                    "Earth"
                 ],
-                "answer": "Skin"
+                "answer": "Jupiter"
             },
             {
-                "question": "What is the largest mammal in the world?",
+                "question": "Who painted the Mona Lisa?",
                 "choices": [
-                    "Elephant",
-                    "Blue Whale",
-                    "Giraffe",
-                    "Hippopotamus"
+                    "Pablo Picasso",
+                    "Vincent van Gogh",
+                    "Leonardo da Vinci",
+                    "Claude Monet"
                 ],
-                "answer": "Blue Whale"
+                "answer": "Leonardo da Vinci"
             },
             {
-                "question": "How many sides does a hexagon have?",
+                "question": "Which country is the origin of the Olympic Games?",
                 "choices": [
-                    "5",
-                    "6",
-                    "7",
-                    "8"
+                    "Italy",
+                    "Greece",
+                    "United States",
+                    "France"
                 ],
-                "answer": "6"
+                "answer": "Greece"
             },
             {
-                "question": "Which ocean is the largest on Earth?",
+                "question": "Which planet is known as the Red Planet?",
                 "choices": [
-                    "Atlantic Ocean",
-                    "Indian Ocean",
-                    "Pacific Ocean",
-                    "Arctic Ocean"
+                    "Venus",
+                    "Mars",
+                    "Jupiter",
+                    "Saturn"
                 ],
-                "answer": "Pacific Ocean"
+                "answer": "Mars"
             },
             {
-                "question": "What is the capital city of France?",
+                "question": "What is the name of the galaxy that contains our Solar System?",
                 "choices": [
-                    "Rome",
-                    "Paris",
-                    "Madrid",
-                    "Berlin"
+                    "Andromeda",
+                    "Milky Way",
+                    "Triangulum",
+                    "Whirlpool"
                 ],
-                "answer": "Paris"
+                "answer": "Milky Way"
             },
             {
-                "question": "What is the boiling point of water at sea level in Celsius?",
+                "question": "Who wrote the play 'Romeo and Juliet'?",
                 "choices": [
-                    "90\u00b0C",
-                    "100\u00b0C",
-                    "110\u00b0C",
-                    "120\u00b0C"
+                    "William Shakespeare",
+                    "Charles Dickens",
+                    "Jane Austen",
+                    "Mark Twain"
                 ],
-                "answer": "100\u00b0C"
+                "answer": "William Shakespeare"
+            },
+            {
+                "question": "Which type of energy is derived from the Sun?",
+                "choices": [
+                    "Nuclear energy",
+                    "Kinetic energy",
+                    "Solar energy",
+                    "Thermal energy"
+                ],
+                "answer": "Solar energy"
+            },
+            {
+                "question": "Which country is famous for inventing pizza?",
+                "choices": [
+                    "France",
+                    "Italy",
+                    "Greece",
+                    "United States"
+                ],
+                "answer": "Italy"
             },
             {
                 "question": "Who developed the theory of relativity?",
@@ -126,34 +136,24 @@
                 "answer": "Albert Einstein"
             },
             {
-                "question": "Which gas is most abundant in Earth's atmosphere?",
+                "question": "Which famous scientist formulated the laws of motion?",
                 "choices": [
-                    "Oxygen",
-                    "Carbon Dioxide",
-                    "Nitrogen",
-                    "Hydrogen"
+                    "Galileo Galilei",
+                    "Isaac Newton",
+                    "Albert Einstein",
+                    "Nikola Tesla"
                 ],
-                "answer": "Nitrogen"
+                "answer": "Isaac Newton"
             },
             {
-                "question": "Which part of the cell contains genetic material?",
+                "question": "How many sides does a hexagon have?",
                 "choices": [
-                    "Mitochondria",
-                    "Nucleus",
-                    "Ribosome",
-                    "Cytoplasm"
+                    "5",
+                    "6",
+                    "7",
+                    "8"
                 ],
-                "answer": "Nucleus"
-            },
-            {
-                "question": "Which country is the origin of the Olympic Games?",
-                "choices": [
-                    "Italy",
-                    "Greece",
-                    "United States",
-                    "France"
-                ],
-                "answer": "Greece"
+                "answer": "6"
             }
         ],
         "lastQuestion": 0
