@@ -1,0 +1,161 @@
+[
+    {
+        "user": "tecknet",
+        "saveName": "save1",
+        "difficulty": "medium",
+        "score": 0,
+        "questions": [
+            {
+                "question": "What is the process by which water moves through a plant, from the roots to the leaves?",
+                "choices": [
+                    "Photosynthesis",
+                    "Respiration",
+                    "Transpiration",
+                    "Evaporation"
+                ],
+                "answer": "Transpiration"
+            },
+            {
+                "question": "What is the name of the galaxy that contains our Solar System?",
+                "choices": [
+                    "Andromeda",
+                    "Milky Way",
+                    "Triangulum",
+                    "Whirlpool"
+                ],
+                "answer": "Milky Way"
+            },
+            {
+                "question": "What is the square root of 64?",
+                "choices": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ],
+                "answer": "8"
+            },
+            {
+                "question": "How many continents are there on Earth?",
+                "choices": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "answer": "7"
+            },
+            {
+                "question": "Which metal is liquid at room temperature?",
+                "choices": [
+                    "Iron",
+                    "Mercury",
+                    "Silver",
+                    "Gold"
+                ],
+                "answer": "Mercury"
+            },
+            {
+                "question": "What is the largest organ in the human body?",
+                "choices": [
+                    "Heart",
+                    "Liver",
+                    "Skin",
+                    "Lungs"
+                ],
+                "answer": "Skin"
+            },
+            {
+                "question": "What is the largest mammal in the world?",
+                "choices": [
+                    "Elephant",
+                    "Blue Whale",
+                    "Giraffe",
+                    "Hippopotamus"
+                ],
+                "answer": "Blue Whale"
+            },
+            {
+                "question": "How many sides does a hexagon have?",
+                "choices": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ],
+                "answer": "6"
+            },
+            {
+                "question": "Which ocean is the largest on Earth?",
+                "choices": [
+                    "Atlantic Ocean",
+                    "Indian Ocean",
+                    "Pacific Ocean",
+                    "Arctic Ocean"
+                ],
+                "answer": "Pacific Ocean"
+            },
+            {
+                "question": "What is the capital city of France?",
+                "choices": [
+                    "Rome",
+                    "Paris",
+                    "Madrid",
+                    "Berlin"
+                ],
+                "answer": "Paris"
+            },
+            {
+                "question": "What is the boiling point of water at sea level in Celsius?",
+                "choices": [
+                    "90\u00b0C",
+                    "100\u00b0C",
+                    "110\u00b0C",
+                    "120\u00b0C"
+                ],
+                "answer": "100\u00b0C"
+            },
+            {
+                "question": "Who developed the theory of relativity?",
+                "choices": [
+                    "Isaac Newton",
+                    "Albert Einstein",
+                    "Galileo Galilei",
+                    "Nikola Tesla"
+                ],
+                "answer": "Albert Einstein"
+            },
+            {
+                "question": "Which gas is most abundant in Earth's atmosphere?",
+                "choices": [
+                    "Oxygen",
+                    "Carbon Dioxide",
+                    "Nitrogen",
+                    "Hydrogen"
+                ],
+                "answer": "Nitrogen"
+            },
+            {
+                "question": "Which part of the cell contains genetic material?",
+                "choices": [
+                    "Mitochondria",
+                    "Nucleus",
+                    "Ribosome",
+                    "Cytoplasm"
+                ],
+                "answer": "Nucleus"
+            },
+            {
+                "question": "Which country is the origin of the Olympic Games?",
+                "choices": [
+                    "Italy",
+                    "Greece",
+                    "United States",
+                    "France"
+                ],
+                "answer": "Greece"
+            }
+        ],
+        "lastQuestion": 0
+    }
+]

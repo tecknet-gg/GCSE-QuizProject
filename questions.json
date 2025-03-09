@@ -10,153 +10,493 @@
         "answer": "Transpiration"
     },
     {
-        "question": "Which ancient civilization built the city of Petra in Jordan?",
+        "question": "Which planet is known as the Red Planet?",
         "choices": [
-            "Egyptians",
-            "Greeks",
-            "Romans",
-            "Nabataeans"
-        ],
-        "answer": "Nabataeans"
-    },
-    {
-        "question": "What is the largest living species of lizard, found primarily in Indonesia and Papua New Guinea?",
-        "choices": [
-            "Komodo Dragon",
-            "Saltwater Crocodile",
-            "Black Mamba",
-            "Green Anaconda"
-        ],
-        "answer": "Komodo Dragon"
-    },
-    {
-        "question": "Who was the first President of the United States to resign from office?",
-        "choices": [
-            "Richard Nixon",
-            "John F. Kennedy",
-            "Jimmy Carter",
-            "Gerald Ford"
-        ],
-        "answer": "Richard Nixon"
-    },
-    {
-        "question": "What is the process by which an organism's genetic information is passed on from one generation to the next?",
-        "choices": [
-            "Heritage",
-            "Inheritance",
-            "Genetic Drift",
-            "Natural Selection"
-        ],
-        "answer": "Inheritance"
-    },
-    {
-        "question": "Which planet in our solar system has the most moons?",
-        "choices": [
+            "Venus",
+            "Mars",
             "Jupiter",
+            "Saturn"
+        ],
+        "answer": "Mars"
+    },
+    {
+        "question": "Who wrote the play 'Romeo and Juliet'?",
+        "choices": [
+            "William Shakespeare",
+            "Charles Dickens",
+            "Jane Austen",
+            "Mark Twain"
+        ],
+        "answer": "William Shakespeare"
+    },
+    {
+        "question": "What is the capital of Japan?",
+        "choices": [
+            "Beijing",
+            "Seoul",
+            "Bangkok",
+            "Tokyo"
+        ],
+        "answer": "Tokyo"
+    },
+    {
+        "question": "What is the chemical symbol for gold?",
+        "choices": [
+            "Ag",
+            "Au",
+            "Pb",
+            "Fe"
+        ],
+        "answer": "Au"
+    },
+    {
+        "question": "Which element is essential for respiration?",
+        "choices": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "Which ocean is the largest on Earth?",
+        "choices": [
+            "Atlantic Ocean",
+            "Indian Ocean",
+            "Pacific Ocean",
+            "Arctic Ocean"
+        ],
+        "answer": "Pacific Ocean"
+    },
+    {
+        "question": "How many continents are there on Earth?",
+        "choices": [
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "answer": "7"
+    },
+    {
+        "question": "What is the longest river in the world?",
+        "choices": [
+            "Amazon River",
+            "Nile River",
+            "Yangtze River",
+            "Mississippi River"
+        ],
+        "answer": "Nile River"
+    },
+    {
+        "question": "Which gas do plants absorb from the atmosphere for photosynthesis?",
+        "choices": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Methane"
+        ],
+        "answer": "Carbon Dioxide"
+    },
+    {
+        "question": "Who developed the theory of relativity?",
+        "choices": [
+            "Isaac Newton",
+            "Albert Einstein",
+            "Galileo Galilei",
+            "Nikola Tesla"
+        ],
+        "answer": "Albert Einstein"
+    },
+    {
+        "question": "Which country is famous for inventing pizza?",
+        "choices": [
+            "France",
+            "Italy",
+            "Greece",
+            "United States"
+        ],
+        "answer": "Italy"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "choices": [
+            "Gold",
+            "Iron",
+            "Diamond",
+            "Quartz"
+        ],
+        "answer": "Diamond"
+    },
+    {
+        "question": "What is the smallest unit of life?",
+        "choices": [
+            "Atom",
+            "Molecule",
+            "Cell",
+            "Tissue"
+        ],
+        "answer": "Cell"
+    },
+    {
+        "question": "Which country is home to the Great Pyramid of Giza?",
+        "choices": [
+            "Greece",
+            "Egypt",
+            "Mexico",
+            "India"
+        ],
+        "answer": "Egypt"
+    },
+    {
+        "question": "What is the boiling point of water at sea level in Celsius?",
+        "choices": [
+            "90°C",
+            "100°C",
+            "110°C",
+            "120°C"
+        ],
+        "answer": "100°C"
+    },
+    {
+        "question": "Which bird is known for its ability to mimic human speech?",
+        "choices": [
+            "Crow",
+            "Parrot",
+            "Eagle",
+            "Owl"
+        ],
+        "answer": "Parrot"
+    },
+    {
+        "question": "What is the largest organ in the human body?",
+        "choices": [
+            "Heart",
+            "Liver",
+            "Skin",
+            "Lungs"
+        ],
+        "answer": "Skin"
+    },
+    {
+        "question": "Which is the tallest mountain in the world?",
+        "choices": [
+            "K2",
+            "Mount Everest",
+            "Kilimanjaro",
+            "Denali"
+        ],
+        "answer": "Mount Everest"
+    },
+    {
+        "question": "What is the main ingredient in guacamole?",
+        "choices": [
+            "Tomato",
+            "Avocado",
+            "Lettuce",
+            "Cucumber"
+        ],
+        "answer": "Avocado"
+    },
+    {
+        "question": "Which planet is the largest in the Solar System?",
+        "choices": [
             "Saturn",
-            "Uranus",
-            "Neptune"
+            "Jupiter",
+            "Neptune",
+            "Earth"
         ],
         "answer": "Jupiter"
     },
     {
-        "question": "Who was the famous American inventor who developed the light bulb, phonograph, and motion picture camera?",
+        "question": "What is the capital city of France?",
         "choices": [
-            "Thomas Edison",
-            "Alexander Graham Bell",
-            "Nikola Tesla",
-            "Henry Ford"
+            "Rome",
+            "Paris",
+            "Madrid",
+            "Berlin"
         ],
-        "answer": "Thomas Edison"
+        "answer": "Paris"
     },
     {
-        "question": "What is the largest mammal on Earth, found in Africa and Asia?",
+        "question": "Which chemical element has the symbol 'O'?",
         "choices": [
+            "Osmium",
+            "Oxygen",
+            "Oganesson",
+            "Oxide"
+        ],
+        "answer": "Oxygen"
+    },
+    {
+        "question": "What is the largest mammal in the world?",
+        "choices": [
+            "Elephant",
             "Blue Whale",
-            "Fin Whale",
-            "African Elephant",
-            "Asian Elephant"
+            "Giraffe",
+            "Hippopotamus"
         ],
-        "answer": "African Elephant"
+        "answer": "Blue Whale"
     },
     {
-        "question": "Who was the first woman to win a Nobel Prize, awarded for her work on X-rays?",
+        "question": "Who painted the Mona Lisa?",
+        "choices": [
+            "Pablo Picasso",
+            "Vincent van Gogh",
+            "Leonardo da Vinci",
+            "Claude Monet"
+        ],
+        "answer": "Leonardo da Vinci"
+    },
+    {
+        "question": "Which gas is most abundant in Earth's atmosphere?",
+        "choices": [
+            "Oxygen",
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Hydrogen"
+        ],
+        "answer": "Nitrogen"
+    },
+    {
+        "question": "What is the capital of Canada?",
+        "choices": [
+            "Toronto",
+            "Vancouver",
+            "Ottawa",
+            "Montreal"
+        ],
+        "answer": "Ottawa"
+    },
+    {
+        "question": "Which continent is known as the 'Land Down Under'?",
+        "choices": [
+            "South America",
+            "Australia",
+            "Africa",
+            "Antarctica"
+        ],
+        "answer": "Australia"
+    },
+    {
+        "question": "What is the chemical symbol for sodium?",
+        "choices": [
+            "Na",
+            "S",
+            "So",
+            "Sd"
+        ],
+        "answer": "Na"
+    },
+    {
+        "question": "How many chambers does the human heart have?",
+        "choices": [
+            "2",
+            "3",
+            "4",
+            "5"
+        ],
+        "answer": "4"
+    },
+    {
+        "question": "What is the main language spoken in Brazil?",
+        "choices": [
+            "Spanish",
+            "Portuguese",
+            "French",
+            "English"
+        ],
+        "answer": "Portuguese"
+    },
+    {
+        "question": "Which is the smallest planet in the Solar System?",
+        "choices": [
+            "Mercury",
+            "Mars",
+            "Pluto",
+            "Venus"
+        ],
+        "answer": "Mercury"
+    },
+    {
+        "question": "Which famous scientist discovered penicillin?",
         "choices": [
             "Marie Curie",
-            "Rosalind Franklin",
-            "Ada Lovelace",
-            "Sophia Kovalevskaya"
+            "Alexander Fleming",
+            "Louis Pasteur",
+            "Isaac Newton"
         ],
-        "answer": "Maria Sk\u0142odowska-Curie"
+        "answer": "Alexander Fleming"
     },
     {
-        "question": "What is the process by which an organism's cells become specialized to perform specific functions?",
+        "question": "How many sides does a hexagon have?",
         "choices": [
-            "Differentiation",
-            "Mitosis",
-            "Meiosis",
-            "Cellular Respiration"
+            "5",
+            "6",
+            "7",
+            "8"
         ],
-        "answer": "Differentiation"
+        "answer": "6"
     },
     {
-        "question": "Which ancient city was the capital of the Inca Empire in Peru?",
+        "question": "Which natural disaster is measured using the Richter scale?",
         "choices": [
-            "Machu Picchu",
-            "Cuzco",
-            "Lima",
-            "Quito"
+            "Hurricanes",
+            "Tornadoes",
+            "Earthquakes",
+            "Tsunamis"
         ],
-        "answer": "Cuzco"
+        "answer": "Earthquakes"
     },
     {
-        "question": "Who was the famous American author who wrote 'To Kill a Mockingbird' and 'Go Set a Watchman'?",
+        "question": "What is the national flower of Japan?",
         "choices": [
-            "F. Scott Fitzgerald",
-            "Harper Lee",
-            "Ernest Hemingway",
-            "John Steinbeck"
+            "Rose",
+            "Cherry Blossom",
+            "Lily",
+            "Tulip"
         ],
-        "answer": "Harper Lee"
+        "answer": "Cherry Blossom"
     },
     {
-        "question": "What is the process by which an organism's body temperature remains relatively constant despite changes in its environment?",
+        "question": "Which country is the origin of the Olympic Games?",
         "choices": [
-            "Homeostasis",
-            "Thermoregulation",
-            "Regulation of Body Temperature",
-            "Temperature Regulation"
+            "Italy",
+            "Greece",
+            "United States",
+            "France"
         ],
-        "answer": "Thermoregulation"
+        "answer": "Greece"
     },
     {
-        "question": "Which ancient civilization built the Great Pyramid of Giza, one of the Seven Wonders of the Ancient World?",
+        "question": "How many bones are in the adult human body?",
         "choices": [
-            "Egyptians",
-            "Greeks",
-            "Romans",
-            "Sumerians"
+            "200",
+            "206",
+            "210",
+            "215"
         ],
-        "answer": "Egyptians"
+        "answer": "206"
     },
     {
-        "question": "Who was the famous American astronaut who first walked on the Moon during the Apollo 11 mission in 1969?",
+        "question": "Which part of the cell contains genetic material?",
         "choices": [
-            "Neil Armstrong",
-            "Buzz Aldrin",
-            "John Glenn",
-            "Edwin 'Buzz' Aldrin"
+            "Mitochondria",
+            "Nucleus",
+            "Ribosome",
+            "Cytoplasm"
         ],
-        "answer": "Neil Armstrong"
+        "answer": "Nucleus"
     },
     {
-        "question": "What is the process by which an organism's genetic information is altered through changes to its DNA sequence?",
+        "question": "Which famous ship sank after hitting an iceberg in 1912?",
         "choices": [
-            "Mutation",
-            "Genetic Drift",
-            "Natural Selection",
-            "Gene Expression"
+            "Queen Mary",
+            "Titanic",
+            "Endeavour",
+            "Bismarck"
         ],
-        "answer": "Mutation"
+        "answer": "Titanic"
+    },
+    {
+        "question": "What is the square root of 64?",
+        "choices": [
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "answer": "8"
+    },
+    {
+        "question": "Which metal is liquid at room temperature?",
+        "choices": [
+            "Iron",
+            "Mercury",
+            "Silver",
+            "Gold"
+        ],
+        "answer": "Mercury"
+    },
+    {
+        "question": "What is the national currency of Japan?",
+        "choices": [
+            "Won",
+            "Yuan",
+            "Yen",
+            "Rupee"
+        ],
+        "answer": "Yen"
+    },
+    {
+        "question": "How many planets are in the Solar System?",
+        "choices": [
+            "7",
+            "8",
+            "9",
+            "10"
+        ],
+        "answer": "8"
+    },
+    {
+        "question": "Which instrument measures atmospheric pressure?",
+        "choices": [
+            "Thermometer",
+            "Barometer",
+            "Hygrometer",
+            "Altimeter"
+        ],
+        "answer": "Barometer"
+    },
+    {
+        "question": "Which Shakespeare play features the characters Rosencrantz and Guildenstern?",
+        "choices": [
+            "Macbeth",
+            "Othello",
+            "Hamlet",
+            "Julius Caesar"
+        ],
+        "answer": "Hamlet"
+    },
+    {
+        "question": "Which type of energy is derived from the Sun?",
+        "choices": [
+            "Nuclear energy",
+            "Kinetic energy",
+            "Solar energy",
+            "Thermal energy"
+        ],
+        "answer": "Solar energy"
+    },
+    {
+        "question": "What is the name of the galaxy that contains our Solar System?",
+        "choices": [
+            "Andromeda",
+            "Milky Way",
+            "Triangulum",
+            "Whirlpool"
+        ],
+        "answer": "Milky Way"
+    },
+    {
+        "question": "Which famous scientist formulated the laws of motion?",
+        "choices": [
+            "Galileo Galilei",
+            "Isaac Newton",
+            "Albert Einstein",
+            "Nikola Tesla"
+        ],
+        "answer": "Isaac Newton"
+    },
+    {
+        "question": "Which organ in the human body produces insulin?",
+        "choices": [
+            "Liver",
+            "Pancreas",
+            "Kidney",
+            "Heart"
+        ],
+        "answer": "Pancreas"
     }
 ]

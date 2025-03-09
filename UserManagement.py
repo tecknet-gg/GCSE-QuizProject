@@ -9,7 +9,7 @@ def addUser(details, filename):
         json.dump(details, file, indent=4)
 
 def login():
-    attempts = 3
+    attempts = 100
     details = {user["username"]: user["password"] for user in openJson("users.json")}
     loggedIn = False
     for _ in range(attempts):
@@ -42,7 +42,7 @@ def registerUser():
             print("Username taken")
             continue
         elif validateUser(username) == 2:
-            print("Username can only contain alphanumeric characters and '@' or '_'")
+            print("Username can only contain alphanumeric characters and '@' or '_' and must be 6 characters or longer")
             continue
         elif validateUser(username) == 3:
             print("Valid username")

@@ -1,23 +1,27 @@
-from UserManagement import *
 import random
+import json
+
+def openJson(filename):
+    with open(filename, "r") as file:
+        return json.load(file)
 
 def newGame(user):
     while True:
         print("Select difficulty: ")
         print("1. Easy")
-        print("2. Normal")
+        print("2. Medium")
         print("3. Hard")
         print("4. Back")
         choice = input("> ")
         match choice:
             case "1":
-                difficulty = easy
+                difficulty = "easy"
                 break
             case "2":
-                difficulty = normal
+                difficulty = "medium"
                 break
             case "3":
-                difficulty = medium
+                difficulty = "hard"
                 break
             case "4":
                 return
@@ -25,11 +29,15 @@ def newGame(user):
                 print("Invalid choice, try again")
 
     questions = openJson("questions.json")
+    random.shuffle(questions)
+    questions = questions[:15]
+
     print("Create name for save state :")
-    name = input("> ")
+    saveName = input("> ")
     lastQuestion = 0
     score = 0
-    return (createSave(name,user,difficulty,score,questions, lastQuestion))
+    createSave(saveName,user,difficulty,score,questions, lastQuestion)
+    return saveName
 
 def createSave(name, user, difficulty, score, questions, lastQuestion):
     entry = {
@@ -40,10 +48,12 @@ def createSave(name, user, difficulty, score, questions, lastQuestion):
         "questions": questions,
         "lastQuestion": lastQuestion
     }
-    with open("saved_games.json", "r") as file:
+    with open("savedGames.json", "r") as file:
         saves = json.load(file)
+
     saves.append(entry)
-    with open("saved_games.json", "w") as file:
+
+    with open("savedGames.json", "w") as file:
         json.dump(saves, file, indent=4)
 
 def updateSave(name, user, difficulty, score, questions, lastQuestion):
@@ -54,4 +64,3 @@ def deleteSave(name, user):
 
 def displaySaves(user):
     pass
-newGame("test")

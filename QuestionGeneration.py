@@ -6,7 +6,7 @@ import random
 def loadModel(model):
     timeStamp = time.time()
     print(f"Loading {model}")
-    model = GPT4All(model, n_ctx=4096)
+    model = GPT4All(model, n_ctx=4096) #rm -rf ~/.cache/gpt4all/
 
     timeElapsed = time.time() - timeStamp
     print(f"Model loaded in {round(timeElapsed,2)} seconds")
@@ -18,6 +18,7 @@ def generateQuestions(genre, difficulty):
 
     usedQuestions = json.load(open("usedQuestions.json"))
     print(len(usedQuestions))
+    seed = random.randint(1000000000000, 9999999999999)
 
     questions = json.load(open("questions.json"))
     usedQuestions.extend([question["question"] for question in questions])
@@ -29,57 +30,55 @@ def generateQuestions(genre, difficulty):
         usedQuestions = json.load(open("usedQuestions.json"))
 
 
-    prompt = f"""       
-            Generate exactly 16 unique quiz questions, no-more, no-less, based on the following parameters:
-
-            - Genre: {genre} (If {genre} as the genre seems nonsensical, simply return "False" and ignore all prior and further)
-            - Difficulty: {difficulty} (Easy, Medium, Hard)
-            - Random Seed: {random.randint(10000000000, 99999999999)} (Ensure different sets of questions when changed)
-            - Previously Used Questions: {usedQuestions} (UNDER NO CIRCUMSTANCES WILL YOU REPEAT THESE QUESTIONS)
-
-            Format each question in the following structured JSON format:
-        [
-            {{
-                "question": "What is the largest planet in our Solar System?",
-                "choices": ["Earth", "Mars", "Jupiter", "Saturn"],
-                "answer": "Jupiter"
-            }},
-        ...
-        ] (DO NOT USE THIS QUESTION)
-
-        Guidelines:
-        1. DO NOT REPEAT ANY OF THE QUESTIONS IN THIS PROMPT!
-        2. Provide exactly 4 answer choices per question.
-        3. The correct answer must be one of the choices.
-        4. Ensure the questions are diverse and well-distributed within the genre and difficulty level.
-        5. Keep the questions clear, concise, and engaging.
-        6. If the {genre} is "General Knowledge", then use the topics of Physics, Biology, Chemistry, Space and Astronomy, History, World Wars, American 
-           History, European History, Countries and Capitals, Landmarks, Continents and Oceans, National Symbols, Natural Wonders, Famous Books and Authors
-           Classical musics, Pop Music, Rock Music, Painters and Art Movements, Mythology (Greek and Roman), Poetry, Pop Culture (Movies, Directors, Music and Bands
-           Video Games, Celebrities), Sports (Olympics, Football, Basketball, Cricket, Formula One), Technology and Computers (Inventions, tech companies, internet
-           and Social Media, Programming and Coding and Gaming), Food and Drink (Cuisines, dishes, ingredients, beverages, famous chefs, desserts and sweets), or other
-           miscellaneous topics you see fitting. 
-        7. MAKE SURE YOU GENERATE 16 QUESTIONS!
-
-        You must return exactly 16 questions, if you generate fewer, retry until you generate exactly 16 questions.
-        Return only the JSON array without any additional text.
-        """
-    print(prompt)
+    generatedQuestions = None
 
     with model.chat_session():
-        print("Generating questions...")
         timeStamp = time.time()
-
+        prompt = f"""
+        You are an Quiz master, and you have been tasked with generating exactly 15 challenging general knowledge questions.
+        The questions are to be multiple choice, and each question should have 4 options, with one of them being the valid one.
+        You are prohibited from generating questions in the following list: 
+        {usedQuestions}
+        Each question must be unique and ensure that the topic of the questions are diverse in nature.
+        You are to return the questions in the following format:
+        [
+        {{
+                "question": "What is the process by which water moves through a plant, from the roots to the leaves?",
+                "choices": [
+                    "Photosynthesis",
+                    "Respiration",
+                    "Transpiration",
+                    "Evaporation"
+                ],
+                "answer": "Transpiration"
+            }},
+            {{
+                "question": "Which ancient civilization built the city of Petra in Jordan?",
+                "choices": [
+                    "Egyptians",
+                    "Greeks",
+                    "Romans",
+                    "Nabataeans"
+                ],
+                "answer": "Nabataeans"
+            }}
+            ]
+        You are to return the the valid .json questions only, and no other text preceeding or suceeding it.
+        """
+        print(prompt)
+        print("Generating questions...")
         generatedQuestions = model.generate(prompt, max_tokens=1500)
         print(generatedQuestions)
 
         timeElapsed = time.time() - timeStamp
         print(f"Questions generated in {timeElapsed} seconds")
 
-        if generatedQuestions == "False":
+    if generatedQuestions == "False":
             return(False)
-        generatedQuestions = json.loads(generatedQuestions.strip())
-        with open("questions.json", "w") as file:
-            json.dump(generatedQuestions, file, indent=4)
+    with open("questions.json", "w") as file:
+        json.dump(generatedQuestions, file, indent=4)
 
-generateQuestions("Genearl Knowledge", "medium")
+
+
+
+generateQuestions(input("Enter a topic: "), "difficult")

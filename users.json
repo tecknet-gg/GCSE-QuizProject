@@ -38,5 +38,10 @@
         "username": "bob123",
         "password": "password123",
         "highscore": "0"
+    },
+    {
+        "username": "bob1234",
+        "password": "Password123",
+        "highscore": "0"
     }
 ]

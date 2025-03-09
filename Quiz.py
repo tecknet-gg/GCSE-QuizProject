@@ -86,8 +86,13 @@ def menuLoop():
                     print("You are not logged in, returning to menu...")
                     time.sleep(0.75)
                     menuLoop()
-                print("Loading Game...")
-                newGame(user)
+                else:
+                    saveName = newGame(user)
+            case "3":
+                questions = openJson("questions.json")
+                random.shuffle(questions)
+                questions = questions[:15]
+                askQuestion(questions,1,"easy")
             case "4":
                 print("Leaderboard")
             case "5":
