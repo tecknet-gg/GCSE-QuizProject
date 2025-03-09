@@ -27,11 +27,11 @@ def newGame(user):
             case _:
                 print("Invalid choice, try again")
 
-    questions = openJson("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/questions.json")
+    questions = openJson("/storage/questions.json")
     random.shuffle(questions)
     questions = questions[:15]
 
-    saves = openJson("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/savedGames.json")
+    saves = openJson("/storage/savedGames.json")
 
     while True:
         valid = True
@@ -61,12 +61,12 @@ def createSave(name, user, difficulty, score, questions, lastQuestion):
         "questions": questions,
         "lastQuestion": lastQuestion
     }
-    with open("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/savedGames.json", "r") as file:
+    with open("/storage/savedGames.json", "r") as file:
         saves = json.load(file)
 
     saves.append(entry)
 
-    with open("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/savedGames.json", "w") as file:
+    with open("/storage/savedGames.json", "w") as file:
         json.dump(saves, file, indent=4)
 
 def updateSave(name, user, difficulty, score, questions, lastQuestion):
@@ -80,7 +80,7 @@ def displaySaves(user):
 def loadSave(user, saveName):
     #find the required save
     #return the save details in a list
-    saves = openJson("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/savedGames.json")
+    saves = openJson("/storage/savedGames.json")
     for entry in saves:
         if entry["user"] == user and entry["saveName"] == saveName:
             return entry

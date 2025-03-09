@@ -91,7 +91,7 @@ def menuLoop():
                 questions = [(i["question"], i["choices"], i["answer"]) for i in loadSave(user, saveName)["questions"]]
 
             case "3":
-                questions = openJson("/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/Persistent Storage/questions.json")
+                questions = openJson("/storage/questions.json")
                 random.shuffle(questions)
                 questions = questions[:15]
                 askQuestion(questions,1,"easy")
