@@ -1,8 +1,26 @@
 [
-  {
-    "user": "tecknet",
-    "score": 100,
-    "difficulty" : "easy",
-    "time": 1741544860
-  }
+    {
+        "user": "bob",
+        "score": 25,
+        "difficulty": "easy",
+        "time": 1741544860
+    },
+    {
+        "user": "tecknet",
+        "score": 10,
+        "difficulty": "hard",
+        "time": 1742144800
+    },
+    {
+        "user": "tecknet",
+        "score": 5,
+        "difficulty": "hard",
+        "time": 1742145475
+    },
+    {
+        "user": "tecknet",
+        "score": 10,
+        "difficulty": "hard",
+        "time": 1742145480
+    }
 ]

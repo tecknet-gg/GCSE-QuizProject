@@ -5,10 +5,10 @@ import time
 
 from SaveManagement import *
 from UserManagement import *
-
-globalHighscore = 0
+from ScoreManagement import *
 
 questionsFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/questions.json"
+
 def openJson(filename):
     with open(filename, "r") as file:
         return json.load(file)
@@ -32,7 +32,7 @@ def askQuestion(questions, questionNumber, difficulty):
             validAnswer = True
         elif answer == choices[0].lower() or answer == choices[1].lower() or answer == choices[2].lower() or answer == choices[3].lower():
             validAnswer = True
-        elif answer == "pass" or answer == "save":
+        elif answer == "pass" or answer == "save" or answer == "back":
             validAnswer = True
         else:
             print("Invalid answer, try again to type pass to give up")
@@ -46,7 +46,7 @@ def askQuestion(questions, questionNumber, difficulty):
             points = 5
         print(f"Correct answer! {points} awarded!")
         return points
-    elif answer.lower() == "save":
+    elif answer == "save" or answer =="back":
         return "save"
     elif answer.lower() == "pass":
         print("Answer skipped, No points awarded.")
@@ -64,17 +64,34 @@ def askQuestion(questions, questionNumber, difficulty):
         return points
 
 def game(user,save):
+
+    globalHighscore = findGlobalHighscore()
+
     questions = save["questions"]
     difficulty = save["difficulty"]
     lastQuestion = save["lastQuestion"]
     savedScore = save["score"]
     saveName = save["saveName"]
+
     i=lastQuestion
     score = savedScore
+
+    userData = openJson(usersFile)
+    for entry in userData:
+        if entry["username"] == user:
+            userData = entry
+    highscore = userData["highscore"]
+
     while True:
-        if i>5:
+        if i>=15:
             print(f"End of quiz, final score = {score}")
-            updateSave(saveName, user, score, i)
+            if score>highscore:
+                print(f"New highscore!")
+                updateUserHighscore(user,score)
+            if score>=globalHighscore:
+                print("New global highscore!")
+            addScore(user,score,difficulty)
+            updateSave(saveName, user, score, (i-1))
             return True
         output = askQuestion(questions, i, difficulty)
         if output == "save" or output == "back":
@@ -85,9 +102,6 @@ def game(user,save):
             score += output
         print(i)
         i+=1
-
-
-
 
 def menuLoop():
     loginStatus = "Login"
@@ -102,9 +116,10 @@ def menuLoop():
         print(f"1 - {loginStatus}")
         print("2 - New Game")
         print("3 - Load Game")
-        print("4 - Leaderboard")
-        print("5 - Register new user")
-        print("6 - Quit")
+        print("4 - Delete Save")
+        print("5 - Leaderboard")
+        print("6 - Register")
+        print("7 - Quit")
         choice = input("> ")
         match choice:
             case "1":
@@ -137,12 +152,41 @@ def menuLoop():
                 else:
                     save = loadSave(user,saveName)
                     game(user,save)
+
             case "4":
-                print("Leaderboard")
+                if loginStatus == "Login":
+                    print("You are not logged in, returning to menu...")
+                    time.sleep(0.75)
+                    menuLoop()
+
+                saveName = displaySaves(user)
+                if saveName == None:
+                    continue
+                else:
+                    deleteSave(saveName,user)
             case "5":
+                if loginStatus == "Login":
+                    print("You are not logged in, returning to menu...")
+                    time.sleep(0.75)
+                    menuLoop()
+                while True:
+                    print()
+                    print("1. Global Leaderboard")
+                    print("2. Local Leaderboard")
+                    choice = input("> ")
+                    if choice.isdigit():
+                        if int(choice) == 1:
+                            displayGlobalTable()
+                        elif int(choice) == 2:
+                            displayPersonalTable(user)
+                    if choice == "back":
+                        break
+                    elif not(choice.isdigit()) and choice != "back":
+                        print("Invalid choice, try again")
+            case "6":
                 print("Registering...")
                 registerUser()
-            case "6":
+            case "7":
                 print("Exiting")
                 sys.exit(0)
             case "debug1":
@@ -154,6 +198,10 @@ def menuLoop():
                 pass
             case "debug3":
                 displaySaves("tecknet")
+            case "0":
+                user = "tecknet"
+                loginStatus = "Login"
+                continue
             case _:
                 print("Invalid choice, returning to menu")
 

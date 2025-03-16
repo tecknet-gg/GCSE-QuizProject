@@ -103,13 +103,16 @@ def displaySaves(user):
         if entry["user"] == user:
             print(f"{saves.index(entry)+1}. Save: {entry["saveName"]}   Questions completed: {entry["lastQuestion"]+1}   Score: {entry["score"]}")
             userSaves.append(entry["saveName"])
+    if len(userSaves) == 0:
+        print("No saves found")
+        return None
     while True:
         saveChoice = input("> ")
         if saveChoice == "back":
             return None
         elif saveChoice in userSaves:
             return saveChoice
-        elif saveChoice.isdigit() and (int(saveChoice)-1) <= len(userSaves):
+        elif saveChoice.isdigit() and 1 <= (int(saveChoice)-1) <= len(userSaves):
             return userSaves[int(saveChoice)-1]
         else:
             print("Invalid choice, try again")
@@ -119,4 +122,4 @@ def loadSave(user, saveName):
     for entry in saves:
         if entry["user"] == user and entry["saveName"] == saveName:
             return entry
-        return None
+    return None

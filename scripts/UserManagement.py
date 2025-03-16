@@ -33,7 +33,7 @@ def login():
 
 def registerUser():
     attempts = 3
-    details = openJson(userFile)
+    details = openJson(usersFile)
     while True:
         username = input("Username: ")
         if username == "back":
@@ -56,14 +56,14 @@ def registerUser():
                                 "password": password,
                                 "highscore": "0"}
                     details.append(newEntry)
-                    addUser(details, userFile)
+                    addUser(details, usersFile)
                     return True
 
         else:
             return False
 
 def validateUser(username):
-    details = {user["username"] for user in openJson(userFile)}
+    details = {user["username"] for user in openJson(usersFile)}
     if username.lower() in details:
         return 1
     elif (username.isalnum() or "@" in username or "_" in username) and len(username) > 4:
@@ -79,6 +79,14 @@ def validatePassword(password):
     elif len(password)<6:
         print("Password too short")
         return False
+    if password.isdigit():
+        print("Password must also contain letters or symbols")
     else:
-        print("Password can only contain alphanumeric characters and '@' or '_'")
+        print("Password must only contain alphanumeric characters and '@' or '_'")
         return False
+
+def updateUserHighscore(user,score):
+    users = openJson(usersFile)
+    for entry in users:
+        if entry["username"] == user:
+            entry["highscore"] = score

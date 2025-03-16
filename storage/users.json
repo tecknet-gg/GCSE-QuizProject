@@ -6,8 +6,8 @@
     },
     {
         "username": "bob",
-        "password": "password456",
-        "highscore": "10"
+        "password": "1",
+        "highscore": "0"
     },
     {
         "username": "CHarlie",
@@ -41,6 +41,16 @@
     },
     {
         "username": "bob1234",
+        "password": "Password123",
+        "highscore": "0"
+    },
+    {
+        "username": "tecknet1",
+        "password": "Password@123",
+        "highscore": "0"
+    },
+    {
+        "username": "tecknet2",
         "password": "Password123",
         "highscore": "0"
     }
