@@ -1,5 +1,5 @@
 import json
-
+usersFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/users.json"
 def openJson(filename):
     with open(filename, "r") as file:
         return json.load(file)
@@ -10,7 +10,7 @@ def addUser(details, filename):
 
 def login():
     attempts = 100
-    details = {user["username"]: user["password"] for user in openJson("/storage/users.json")}
+    details = {user["username"]: user["password"] for user in openJson(usersFile)}
     loggedIn = False
     for _ in range(attempts):
         if loggedIn:
@@ -33,7 +33,7 @@ def login():
 
 def registerUser():
     attempts = 3
-    details = openJson("/storage/users.json")
+    details = openJson(userFile)
     while True:
         username = input("Username: ")
         if username == "back":
@@ -56,14 +56,14 @@ def registerUser():
                                 "password": password,
                                 "highscore": "0"}
                     details.append(newEntry)
-                    addUser(details, "/storage/users.json")
+                    addUser(details, userFile)
                     return True
 
         else:
             return False
 
 def validateUser(username):
-    details = {user["username"] for user in openJson("/storage/users.json")}
+    details = {user["username"] for user in openJson(userFile)}
     if username.lower() in details:
         return 1
     elif (username.isalnum() or "@" in username or "_" in username) and len(username) > 4:

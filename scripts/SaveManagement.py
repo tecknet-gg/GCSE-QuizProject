@@ -1,6 +1,10 @@
 import random
 import json
 
+
+savesFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/savedGames.json"
+questionsFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/questions.json"
+
 def openJson(filename):
     with open(filename, "r") as file:
         return json.load(file)
@@ -23,15 +27,15 @@ def newGame(user):
                 difficulty = "hard"
                 break
             case "back":
-                return
+                return False
             case _:
                 print("Invalid choice, try again")
 
-    questions = openJson("/storage/questions.json")
+    questions = openJson(questionsFile)
     random.shuffle(questions)
     questions = questions[:15]
 
-    saves = openJson("/storage/savedGames.json")
+    saves = openJson(savesFile)
 
     while True:
         valid = True
@@ -61,26 +65,58 @@ def createSave(name, user, difficulty, score, questions, lastQuestion):
         "questions": questions,
         "lastQuestion": lastQuestion
     }
-    with open("/storage/savedGames.json", "r") as file:
+    with open(savesFile, "r") as file:
         saves = json.load(file)
 
     saves.append(entry)
 
-    with open("/storage/savedGames.json", "w") as file:
+    with open(savesFile, "w") as file:
         json.dump(saves, file, indent=4)
 
-def updateSave(name, user, difficulty, score, questions, lastQuestion):
+def updateSave(name, user, score, lastQuestion):
+    saves = openJson(savesFile)
+    for entry in saves:
+        if entry["user"] == user and entry["saveName"] == name:
+            entry["score"] = score
+            entry["lastQuestion"] = lastQuestion
+            break
+    file = openJson(savesFile)
+    with open(savesFile, "w") as file:
+        json.dump(saves, file, indent=4)
+
     pass
 
 def deleteSave(name, user):
-    pass
+    saves = openJson(savesFile)
+    for entry in saves:
+        if entry["user"] == user and entry["saveName"] == name:
+            del saves[saves.index(entry)]
+    file = openJson(savesFile)
+    with open(savesFile, "w") as file:
+        json.dump(saves, file, indent=4)
+
 
 def displaySaves(user):
-    pass
+    saves = openJson(savesFile)
+    userSaves = []
+    for entry in saves:
+        if entry["user"] == user:
+            print(f"{saves.index(entry)+1}. Save: {entry["saveName"]}   Questions completed: {entry["lastQuestion"]+1}   Score: {entry["score"]}")
+            userSaves.append(entry["saveName"])
+    while True:
+        saveChoice = input("> ")
+        if saveChoice == "back":
+            return None
+        elif saveChoice in userSaves:
+            return saveChoice
+        elif saveChoice.isdigit() and (int(saveChoice)-1) <= len(userSaves):
+            return userSaves[int(saveChoice)-1]
+        else:
+            print("Invalid choice, try again")
+
 def loadSave(user, saveName):
-    #find the required save
-    #return the save details in a list
-    saves = openJson("/storage/savedGames.json")
+    saves = openJson(savesFile)
     for entry in saves:
         if entry["user"] == user and entry["saveName"] == saveName:
             return entry
+        return None
