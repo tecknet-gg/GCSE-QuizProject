@@ -53,7 +53,6 @@ def newGame(user):
     lastQuestion = 0
     score = 0
     createSave(saveName,user,difficulty, score, questions, lastQuestion)
-    print(type(saveName))
     return saveName
 
 def createSave(name, user, difficulty, score, questions, lastQuestion):
@@ -112,7 +111,7 @@ def displaySaves(user):
             return None
         elif saveChoice in userSaves:
             return saveChoice
-        elif saveChoice.isdigit() and 1 <= (int(saveChoice)-1) <= len(userSaves):
+        elif saveChoice.isdigit():
             return userSaves[int(saveChoice)-1]
         else:
             print("Invalid choice, try again")

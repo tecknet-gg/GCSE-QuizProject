@@ -44,7 +44,7 @@ def askQuestion(questions, questionNumber, difficulty):
             points = 3
         elif difficulty == 'hard':
             points = 5
-        print(f"Correct answer! {points} awarded!")
+        print(f"Correct answer! {points} points awarded!")
         return points
     elif answer == "save" or answer =="back":
         return "save"
@@ -85,7 +85,7 @@ def game(user,save):
     while True:
         if i>=15:
             print(f"End of quiz, final score = {score}")
-            if score>highscore:
+            if score>int(highscore):
                 print(f"New highscore!")
                 updateUserHighscore(user,score)
             if score>=globalHighscore:
@@ -100,7 +100,6 @@ def game(user,save):
             return False
         else:
             score += output
-        print(i)
         i+=1
 
 def menuLoop():
@@ -172,7 +171,7 @@ def menuLoop():
                 while True:
                     print()
                     print("1. Global Leaderboard")
-                    print("2. Local Leaderboard")
+                    print("2. Personal Leaderboard")
                     choice = input("> ")
                     if choice.isdigit():
                         if int(choice) == 1:

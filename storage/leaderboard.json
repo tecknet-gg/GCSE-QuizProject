@@ -22,5 +22,11 @@
         "score": 10,
         "difficulty": "hard",
         "time": 1742145480
+    },
+    {
+        "user": "bob",
+        "score": 15,
+        "difficulty": "medium",
+        "time": 1742163693
     }
 ]
