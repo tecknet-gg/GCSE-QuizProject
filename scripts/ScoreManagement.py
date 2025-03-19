@@ -2,8 +2,7 @@ import time
 import json
 import datetime
 
-from scripts.UserManagement import usersFile
-
+userFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/users.json"
 leaderboardFile = "/Users/jeevan/Documents/Python/PythonProject/GCSE-Quiz/storage/leaderboard.json"
 
 def openJson(filename):
