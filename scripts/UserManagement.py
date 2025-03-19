@@ -17,7 +17,7 @@ def login():
             break
         username = input("Username: ")
         if username == "back":
-            break
+            return None
         if username in details:
             for _ in range(attempts):
                 password = input("Password: ")

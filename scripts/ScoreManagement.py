@@ -25,7 +25,7 @@ def addScore(user,score,difficulty):
 
 def displayGlobalTable():
     scores = openJson(leaderboardFile)
-    scores = sorted(scores, key=lambda x: (-x["score"], x["time"]))
+    scores = sorted(scores, key=lambda entry: (-entry["score"], entry["time"]))
 
     users = []
     for entry in scores:

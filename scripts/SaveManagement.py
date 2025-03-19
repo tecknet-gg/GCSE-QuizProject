@@ -42,18 +42,17 @@ def newGame(user):
         print("Name your save: ")
         saveName = input("> ")
         if saveName == "back":
-            newGame(user)
+            break
         for entry in saves:
             if entry["user"] == user and entry["saveName"] == saveName:
                 print("Already exists")
                 valid = False
         if valid == True:
-            break
+            lastQuestion = 0
+            score = 0
+            createSave(saveName, user, difficulty, score, questions, lastQuestion)
+            return saveName
 
-    lastQuestion = 0
-    score = 0
-    createSave(saveName,user,difficulty, score, questions, lastQuestion)
-    return saveName
 
 def createSave(name, user, difficulty, score, questions, lastQuestion):
     entry = {
@@ -93,6 +92,7 @@ def deleteSave(name, user):
     file = openJson(savesFile)
     with open(savesFile, "w") as file:
         json.dump(saves, file, indent=4)
+    print("Saves deleted")
 
 
 def displaySaves(user):
@@ -100,8 +100,9 @@ def displaySaves(user):
     userSaves = []
     for entry in saves:
         if entry["user"] == user:
-            print(f"{saves.index(entry)+1}. Save: {entry["saveName"]}   Questions completed: {entry["lastQuestion"]+1}   Score: {entry["score"]}")
-            userSaves.append(entry["saveName"])
+            userSaves.append(entry)
+    for entry in userSaves:
+        print(f"{userSaves.index(entry)+1}. Save: {entry["saveName"]}   Questions completed: {entry["lastQuestion"]+1}   Score: {entry["score"]}")
     if len(userSaves) == 0:
         print("No saves found")
         return None
@@ -112,7 +113,8 @@ def displaySaves(user):
         elif saveChoice in userSaves:
             return saveChoice
         elif saveChoice.isdigit():
-            return userSaves[int(saveChoice)-1]
+            save = userSaves[int(saveChoice)-1]
+            return save["saveName"]
         else:
             print("Invalid choice, try again")
 

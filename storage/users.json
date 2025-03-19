@@ -53,5 +53,10 @@
         "username": "tecknet2",
         "password": "Password123",
         "highscore": "0"
+    },
+    {
+        "username": "Alice",
+        "password": "Password123",
+        "highscore": "0"
     }
 ]

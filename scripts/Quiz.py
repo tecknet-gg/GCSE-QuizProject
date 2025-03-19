@@ -73,6 +73,10 @@ def game(user,save):
     savedScore = save["score"]
     saveName = save["saveName"]
 
+    if lastQuestion >= 14:
+        print("Game completed successfully!3")
+        return False
+
     i=lastQuestion
     score = savedScore
 
@@ -124,6 +128,8 @@ def menuLoop():
             case "1":
                 if loginStatus == "Login":
                     user = login()
+                    if user == None:
+                        menuLoop()
                     loginStatus = f"Logout"
                 else:
                     print("Logging out...")
@@ -138,6 +144,8 @@ def menuLoop():
                 if saveName == False:
                     continue
                 save = loadSave(user,saveName)
+                if save == None:
+                    continue
                 game(user,save)
 
             case "3":

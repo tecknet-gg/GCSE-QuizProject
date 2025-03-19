@@ -28,5 +28,23 @@
         "score": 15,
         "difficulty": "medium",
         "time": 1742163693
+    },
+    {
+        "user": "tecknet",
+        "score": 54,
+        "difficulty": "hard",
+        "time": 1742366596
+    },
+    {
+        "user": "tecknet",
+        "score": 59,
+        "difficulty": "hard",
+        "time": 1742366675
+    },
+    {
+        "user": "tecknet",
+        "score": 64,
+        "difficulty": "hard",
+        "time": 1742366686
     }
 ]
