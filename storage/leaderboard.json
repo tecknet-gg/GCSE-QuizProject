@@ -46,5 +46,17 @@
         "score": 64,
         "difficulty": "hard",
         "time": 1742366686
+    },
+    {
+        "user": "tecknet",
+        "score": 75,
+        "difficulty": "hard",
+        "time": 1742490970
+    },
+    {
+        "user": "capybara",
+        "score": -13,
+        "difficulty": "hard",
+        "time": 1742497829
     }
 ]

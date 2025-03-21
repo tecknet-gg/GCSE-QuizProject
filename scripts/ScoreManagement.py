@@ -45,6 +45,7 @@ def displayPersonalTable(user):
     for entry in scores:
         if entry["user"] == user:
             userScores.append(entry)
+    userScores = sorted(userScores, key=lambda entry: (-entry["score"], entry["time"]))
 
     users = []
     for entry in userScores:
